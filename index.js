@@ -6,6 +6,12 @@ const app = express();
 // INIT MIDDLEWARE
 // app.use(logger);
 
+// BODY PARSER MIDDLEARE
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: false
+}));
+
 // SET A STATIC FOLDER
 app.use(express.static(path.join(__dirname, 'public')));
 
